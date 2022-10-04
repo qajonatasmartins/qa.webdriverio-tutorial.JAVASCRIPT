@@ -16,3 +16,12 @@ Me siga nas redes sociais 🫶🏻🐞
 	<a href="https://www.youtube.com/channel/UCD2fgVj5Yt8roBtWHXDLykg"><img alt="youtube" width="10%" style="padding:5px" src="https://img.icons8.com/clouds/344/youtube.png"/></a>
 	<a href="https://www.instagram.com/qajonatasmartins/"><img alt="instagram" width="10%" style="padding:5px" src="https://img.icons8.com/clouds/100/000000/instagram.png"/></a>
 </p>
+
+## Pre-requisitos para rodar o projeto
+
+- Node Js
+- Navegador Chrome
+
+## Para instalar o projeto
+
+Execute o comando `npm install`
