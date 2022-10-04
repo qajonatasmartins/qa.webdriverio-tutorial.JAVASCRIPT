@@ -25,3 +25,7 @@ Me siga nas redes sociais 🫶🏻🐞
 ## Para instalar o projeto
 
 Execute o comando `npm install`
+
+## Para rodar os testes
+
+Execute `npm run wdio`
