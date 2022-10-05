@@ -29,3 +29,54 @@ Execute o comando `npm install`
 ## Para rodar os testes
 
 Execute `npm run wdio`
+
+## IMPORTANTE
+
+A pasta `test` gerada pelo webdriverio foi renomeada para `tests`
+
+## Erros e solçuões
+
+1. Erro `pattern ./test/specs/**/*.js did not match any file` ao executar os testes do webdriverio
+
+**Problema**
+
+O erro abaixo foi apresentado porque o nome da pasta `tests` estava incorreto no arquivo de configuração(wdio.conf.js) do webdriverio.
+
+ WebdriverIO git:(aula-02) ✗ npm run wdio
+
+webdriverio-tests@0.1.0 wdio
+wdio run wdio.conf.js
+
+2022-10-04T23:20:01.708Z WARN @wdio/config:ConfigParser: pattern ./test/specs/**/*.js did not match any file
+
+Execution of 0 workers started at 2022-10-04T23:20:01.715Z
+
+2022-10-04T23:20:01.740Z INFO @wdio/cli:launcher: Run onPrepare hook
+2022-10-04T23:20:01.741Z INFO chromedriver: Start Chromedriver (/Users/jonatasmartins/Documents/Projetos/qajonatasmartins/WebdriverIO/node_modules/chromedriver/lib/chromedriver/chromedriver) with args --port=9515 --url-base=/
+2022-10-04T23:20:01.766Z INFO chromedriver: Starting ChromeDriver 105.0.5195.52 (412c95e518836d8a7d97250d62b29c2ae6a26a85-refs/branch-heads/5195@{#853}) on port 9515
+2022-10-04T23:20:01.766Z INFO chromedriver: Only local connections are allowed.
+2022-10-04T23:20:01.766Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+2022-10-04T23:20:01.778Z INFO chromedriver: ChromeDriver was started successfully.
+2022-10-04T23:20:01.853Z WARN @wdio/config:ConfigParser: pattern ./test/specs/**/*.js did not match any file
+2022-10-04T23:20:01.853Z ERROR @wdio/cli:launcher: No specs found to run, exiting with failure
+2022-10-04T23:20:01.854Z INFO @wdio/cli:launcher: Run onComplete hook
+
+**Solução**
+
+- Abra o arquivo wdio.conf.js
+- Pesquise por `specs:` e altere a string com o nome da pasta `test` para `tests`.
+
+Antes:
+```
+    specs: [
+        './test/specs/**/*.js'
+    ],
+```
+Depois:
+```
+    specs: [
+        './tests/specs/**/*.js'
+    ],
+```
+
+2. 
